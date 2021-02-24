@@ -35,7 +35,7 @@ class SomeService {
 
   @RateLimiter(name="processService", fallbackMethod = "processFallback")
   fun process(): Mono<String> {
-    return Mono.just("ah what do you want ...")
+    return Mono.just("Hey there! what do you want ...")
   }
 
   fun processFallback(exp: Throwable): Mono<String> {

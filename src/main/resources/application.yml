@@ -2,7 +2,7 @@ resilience4j.ratelimiter:
   instances:
     processService:
       limitForPeriod: 1
-      limitRefreshPeriod: 30s
+      limitRefreshPeriod: 15s
       timeoutDuration: 1
       registerHealthIndicator: true
 
@@ -10,6 +10,8 @@ management:
   health:
     ratelimiters:
       enabled: true
+    diskSpace:
+      enabled: false
   endpoints:
     web:
       base-path: /
